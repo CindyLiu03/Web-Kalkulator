@@ -1,0 +1,60 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    background-image: url(Galaxy-tumblr-wallpaper-images-hd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  }
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid rgb(90, 60, 4);
+    outline: none;
+    background: linear-gradient(to right, #ae8625, #f7ef8a);
+  }
+  
+  .calculator-grid > button:hover {
+    background-color: #f7ef8a;
+  }
+  
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    grid-column: 1 / -1;
+    background: linear-gradient(to right, #ae8625, #f7ef8a);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .output .previous-operand {
+    color: black;
+    font-size: 1.5rem;
+  }
+  
+  .output .current-operand {
+    color: black;
+    font-size: 2.5rem;
+  }
